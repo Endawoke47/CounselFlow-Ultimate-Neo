@@ -79,10 +79,6 @@ export const MattersPage: React.FC = () => {
     }).length
   };
 
-  const getLinkedItems = (matter: Matter) => {
-    const linked = dataManager.getLinkedItems('Matter', matter.matterID);
-    return linked;
-  };
 
   const isOverdue = (dueDate: string) => {
     return new Date(dueDate) < new Date();

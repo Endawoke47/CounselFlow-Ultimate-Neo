@@ -417,6 +417,16 @@ export const FileIcon: React.FC<IconProps> = ({ className = '', size = 24, strok
   </svg>
 )
 
+export const BookIcon: React.FC<IconProps> = ({ className = '', size = 24, strokeWidth = 1.5 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+    <path d="M8 7h8" />
+    <path d="M8 11h8" />
+    <path d="M8 15h6" />
+  </svg>
+)
+
 export const DatabaseIcon: React.FC<IconProps> = ({ className = '', size = 24, strokeWidth = 1.5 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
     <ellipse cx="12" cy="5" rx="9" ry="3" />
@@ -582,8 +592,9 @@ export const FlashIcon: React.FC<IconProps> = ({ className = '', size = 24, stro
 
 export const SparklesIcon: React.FC<IconProps> = ({ className = '', size = 24, strokeWidth = 1.5 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M9 11l3 3L22 4" />
-    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+    <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5z" />
+    <path d="M19 3l1 3 3 1-3 1-1 3-1-3-3-1 3-1z" />
+    <path d="M5 17l1 3 3 1-3 1-1 3-1-3-3-1 3-1z" />
   </svg>
 )
 
@@ -1025,7 +1036,7 @@ export const TorusIcon: React.FC<IconProps> = ({ className = '', size = 24, stro
   </svg>
 )
 
-export default {
+export const Icons = {
   // Module Icons
   DashboardIcon,
   MattersIcon,

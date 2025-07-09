@@ -13,8 +13,7 @@ import {
   SearchIcon,
   TrendingUpIcon,
   RiskIcon,
-  DollarIcon,
-  CalendarIcon
+  DollarIcon
 } from '../components/icons';
 
 export const ContractsPage: React.FC = () => {
@@ -65,10 +64,6 @@ export const ContractsPage: React.FC = () => {
     highRisk: contracts.filter(c => c.riskFlag).length
   };
 
-  const getLinkedItems = (contract: Contract) => {
-    const linked = dataManager.getLinkedItems('Contract', contract.contractId);
-    return linked;
-  };
 
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {

@@ -1,12 +1,8 @@
 import React from 'react';
-import { dataManager, ChartData, AnalyticsMetric } from '../../data';
+import { dataManager, ChartData } from '../../data';
 import { 
-  BarChartIcon, 
-  PieChartIcon, 
-  LineChartIcon, 
   TrendingUpIcon, 
-  TrendingDownIcon, 
-  ActivityIcon 
+  TrendingDownIcon
 } from '../icons';
 
 // Simple Chart Components (since we don't have chart libraries)

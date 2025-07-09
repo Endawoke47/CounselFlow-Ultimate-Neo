@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Sidebar } from '../components/Sidebar';
 import { TopNav } from '../components/TopNav';
 import { AILegalSearch } from '../components/knowledge/AILegalSearch';
-import { dataManager, Knowledge, LegalDocument } from '../data';
+import { dataManager, Knowledge } from '../data';
+import { LegalDocument } from '../services/legalDatabaseService';
 import { 
   KnowledgeIcon, 
   PlusIcon, 

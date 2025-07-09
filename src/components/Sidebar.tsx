@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { 
   DashboardIcon,
   MattersIcon,
@@ -22,22 +22,29 @@ interface SidebarProps {
 }
 
 const sidebarItems = [
-  { id: 'dashboard', name: 'Dashboard', icon: DashboardIcon },
-  { id: 'matters', name: 'Matters', icon: MattersIcon },
-  { id: 'clm', name: 'CLM', icon: ContractIcon },
-  { id: 'disputes', name: 'Disputes', icon: DisputesIcon },
-  { id: 'intake', name: 'Intake', icon: IntakeIcon },
-  { id: 'entities', name: 'Entities', icon: EntitiesIcon },
-  { id: 'tasks', name: 'Tasks', icon: TasksIcon },
-  { id: 'knowledge', name: 'Knowledge', icon: KnowledgeIcon },
-  { id: 'risk', name: 'Risk', icon: RiskIcon },
-  { id: 'outsourcing', name: 'Outsourcing', icon: OutsourcingIcon },
-  { id: 'billing', name: 'Billing', icon: BillingIcon },
-  { id: 'analytics', name: 'Analytics', icon: AnalyticsIcon },
-  { id: 'settings', name: 'Settings', icon: SettingsIcon },
+  { id: 'dashboard', name: 'Dashboard', icon: DashboardIcon, path: '/dashboard' },
+  { id: 'matters', name: 'Matters', icon: MattersIcon, path: '/matters' },
+  { id: 'clm', name: 'CLM', icon: ContractIcon, path: '/contracts' },
+  { id: 'disputes', name: 'Disputes', icon: DisputesIcon, path: '/disputes' },
+  { id: 'intake', name: 'Intake', icon: IntakeIcon, path: '/intake' },
+  { id: 'entities', name: 'Entities', icon: EntitiesIcon, path: '/entities' },
+  { id: 'tasks', name: 'Tasks', icon: TasksIcon, path: '/tasks' },
+  { id: 'knowledge', name: 'Knowledge', icon: KnowledgeIcon, path: '/knowledge' },
+  { id: 'risk', name: 'Risk', icon: RiskIcon, path: '/risk' },
+  { id: 'outsourcing', name: 'Outsourcing', icon: OutsourcingIcon, path: '/outsourcing' },
+  { id: 'billing', name: 'Billing', icon: BillingIcon, path: '/billing' },
+  { id: 'analytics', name: 'Analytics', icon: AnalyticsIcon, path: '/analytics' },
+  { id: 'settings', name: 'Settings', icon: SettingsIcon, path: '/settings' },
 ]
 
 export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (item: any) => {
+    setActiveTab(item.id);
+    navigate(item.path);
+  };
+
   return (
     <div className="fixed inset-y-0 left-0 z-50 w-56 bg-teal-600 shadow-lg">
       <div className="flex flex-col h-full">
@@ -61,7 +68,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
             return (
               <button
                 key={item.id}
-                onClick={() => setActiveTab(item.id)}
+                onClick={() => handleNavigation(item)}
                 className={`w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                   isActive
                     ? 'bg-teal-700 text-white shadow-sm'

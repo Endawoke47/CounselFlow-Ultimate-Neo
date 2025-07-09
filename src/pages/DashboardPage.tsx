@@ -7,14 +7,8 @@ import { AIAssistant } from '../components/AIAssistant'
 import { 
   ContractIcon, 
   RiskIcon, 
-  TrendingUpIcon, 
   DollarIcon, 
-  IntakeIcon, 
-  ShieldIcon,
-  ClockIcon,
-  CheckIcon,
-  CloseIcon,
-  EyeIcon
+  IntakeIcon
 } from '../components/icons'
 
 export const DashboardPage: React.FC = () => {

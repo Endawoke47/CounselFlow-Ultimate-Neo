@@ -73,13 +73,13 @@ export const AILegalSearch: React.FC<AILegalSearchProps> = ({ onDocumentSelect }
     }
   };
 
-  const handleDownload = async (document: LegalDocument, format: 'pdf' | 'doc' | 'txt') => {
+  const handleDownload = async (doc: LegalDocument, format: 'pdf' | 'doc' | 'txt') => {
     try {
-      const blob = await legalDatabaseService.downloadDocument(document, format);
+      const blob = await legalDatabaseService.downloadDocument(doc, format);
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `${document.title.replace(/[^a-z0-9]/gi, '_')}.${format}`;
+      a.download = `${doc.title.replace(/[^a-z0-9]/gi, '_')}.${format}`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);

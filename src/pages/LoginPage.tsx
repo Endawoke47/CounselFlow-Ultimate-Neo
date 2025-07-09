@@ -138,9 +138,9 @@ export const LoginPage: React.FC = () => {
                   Remember me
                 </label>
               </div>
-              <a href="#" className="text-sm text-teal-600 hover:text-teal-500">
+              <button type="button" className="text-sm text-teal-600 hover:text-teal-500">
                 Forgot password?
-              </a>
+              </button>
             </div>
 
             <button
