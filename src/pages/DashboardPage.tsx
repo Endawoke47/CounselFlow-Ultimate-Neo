@@ -5,17 +5,17 @@ import { Calendar } from '../components/Calendar'
 import { Timeline } from '../components/Timeline'
 import { AIAssistant } from '../components/AIAssistant'
 import { 
-  FileText, 
-  AlertTriangle, 
-  TrendingUp, 
-  DollarSign, 
-  Users, 
-  Shield,
-  Clock,
-  CheckCircle,
-  XCircle,
-  Eye
-} from 'lucide-react'
+  ContractIcon, 
+  RiskIcon, 
+  TrendingUpIcon, 
+  DollarIcon, 
+  IntakeIcon, 
+  ShieldIcon,
+  ClockIcon,
+  CheckIcon,
+  CloseIcon,
+  EyeIcon
+} from '../components/icons'
 
 export const DashboardPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('dashboard')
@@ -26,7 +26,7 @@ export const DashboardPage: React.FC = () => {
       value: '24',
       change: '+12%',
       trend: 'up',
-      icon: FileText,
+      icon: ContractIcon,
       color: 'bg-teal-500',
       bgColor: 'bg-teal-50'
     },
@@ -35,7 +35,7 @@ export const DashboardPage: React.FC = () => {
       value: '6',
       change: '-8%',
       trend: 'down',
-      icon: AlertTriangle,
+      icon: RiskIcon,
       color: 'bg-red-500',
       bgColor: 'bg-red-50'
     },
@@ -44,7 +44,7 @@ export const DashboardPage: React.FC = () => {
       value: '18',
       change: '+3%',
       trend: 'up',
-      icon: Users,
+      icon: IntakeIcon,
       color: 'bg-blue-500',
       bgColor: 'bg-blue-50'
     },
@@ -53,7 +53,7 @@ export const DashboardPage: React.FC = () => {
       value: '$127K',
       change: '+5%',
       trend: 'up',
-      icon: DollarSign,
+      icon: DollarIcon,
       color: 'bg-green-500',
       bgColor: 'bg-green-50'
     }

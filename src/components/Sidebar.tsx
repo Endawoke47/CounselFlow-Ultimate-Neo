@@ -1,22 +1,20 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { 
-  Home, 
-  Briefcase, 
-  FileText, 
-  Scale, 
-  Users, 
-  Shield, 
-  CreditCard, 
-  BarChart3, 
-  Settings,
-  Building2,
-  CheckSquare,
-  BookOpen,
-  Target,
-  DollarSign,
-  AlertTriangle
-} from 'lucide-react'
+  DashboardIcon,
+  MattersIcon,
+  ContractIcon,
+  DisputesIcon,
+  IntakeIcon,
+  EntitiesIcon,
+  TasksIcon,
+  KnowledgeIcon,
+  RiskIcon,
+  OutsourcingIcon,
+  BillingIcon,
+  AnalyticsIcon,
+  SettingsIcon
+} from './icons'
 
 interface SidebarProps {
   activeTab: string
@@ -24,19 +22,19 @@ interface SidebarProps {
 }
 
 const sidebarItems = [
-  { id: 'dashboard', name: 'Dashboard', icon: Home },
-  { id: 'matters', name: 'Matters', icon: Briefcase },
-  { id: 'clm', name: 'CLM', icon: FileText },
-  { id: 'disputes', name: 'Disputes', icon: Scale },
-  { id: 'intake', name: 'Intake', icon: Users },
-  { id: 'entities', name: 'Entities', icon: Building2 },
-  { id: 'tasks', name: 'Tasks', icon: CheckSquare },
-  { id: 'knowledge', name: 'Knowledge', icon: BookOpen },
-  { id: 'risk', name: 'Risk', icon: AlertTriangle },
-  { id: 'outsourcing', name: 'Outsourcing', icon: Target },
-  { id: 'billing', name: 'Billing', icon: CreditCard },
-  { id: 'analytics', name: 'Analytics', icon: BarChart3 },
-  { id: 'settings', name: 'Settings', icon: Settings },
+  { id: 'dashboard', name: 'Dashboard', icon: DashboardIcon },
+  { id: 'matters', name: 'Matters', icon: MattersIcon },
+  { id: 'clm', name: 'CLM', icon: ContractIcon },
+  { id: 'disputes', name: 'Disputes', icon: DisputesIcon },
+  { id: 'intake', name: 'Intake', icon: IntakeIcon },
+  { id: 'entities', name: 'Entities', icon: EntitiesIcon },
+  { id: 'tasks', name: 'Tasks', icon: TasksIcon },
+  { id: 'knowledge', name: 'Knowledge', icon: KnowledgeIcon },
+  { id: 'risk', name: 'Risk', icon: RiskIcon },
+  { id: 'outsourcing', name: 'Outsourcing', icon: OutsourcingIcon },
+  { id: 'billing', name: 'Billing', icon: BillingIcon },
+  { id: 'analytics', name: 'Analytics', icon: AnalyticsIcon },
+  { id: 'settings', name: 'Settings', icon: SettingsIcon },
 ]
 
 export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {

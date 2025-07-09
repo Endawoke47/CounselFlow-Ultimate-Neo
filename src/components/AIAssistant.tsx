@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Bot, Send, Sparkles, Zap, MessageSquare } from 'lucide-react'
+import { AIIcon, SendIcon, SparklesIcon, ZapIcon, MessageIcon } from './icons'
 
 interface AIAssistantProps {
   className?: string
@@ -42,7 +42,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ className }) => {
       <div className="flex items-center mb-4">
         <div className="flex items-center">
           <div className="w-8 h-8 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center">
-            <Bot className="h-4 w-4 text-white" />
+            <AIIcon className="h-4 w-4 text-white" />
           </div>
           <div className="ml-3">
             <h3 className="text-lg font-semibold text-gray-900">AI Legal Assistant</h3>
@@ -68,13 +68,13 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ className }) => {
             {isLoading ? (
               <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
             ) : (
-              <Send className="h-4 w-4" />
+              <SendIcon className="h-4 w-4" />
             )}
           </button>
         </div>
 
         <div className="flex items-center space-x-2 mb-3">
-          <Sparkles className="h-4 w-4 text-teal-500" />
+          <SparklesIcon className="h-4 w-4 text-teal-500" />
           <span className="text-sm font-medium text-gray-700">Quick Prompts:</span>
         </div>
         
@@ -95,11 +95,11 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ className }) => {
       <div className="mt-4 pt-4 border-t border-gray-200">
         <div className="flex items-center justify-between text-sm">
           <div className="flex items-center text-gray-500">
-            <Zap className="h-4 w-4 mr-1" />
+            <ZapIcon className="h-4 w-4 mr-1" />
             <span>Powered by GPT-4</span>
           </div>
           <div className="flex items-center text-gray-500">
-            <MessageSquare className="h-4 w-4 mr-1" />
+            <MessageIcon className="h-4 w-4 mr-1" />
             <span>24/7 Available</span>
           </div>
         </div>
