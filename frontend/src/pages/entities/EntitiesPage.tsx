@@ -143,8 +143,8 @@ export const EntitiesPage: React.FC = () => {
       sortable: true,
       render: (value, item) => (
         <div className="flex items-center">
-          <div className="h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-            <Building2 className="h-5 w-5 text-blue-600" />
+          <div className="h-10 w-10 bg-teal-100 rounded-lg flex items-center justify-center mr-3">
+            <Building2 className="h-5 w-5 text-teal-600" />
           </div>
           <div>
             <div className="font-medium text-gray-900">{value}</div>
@@ -308,7 +308,7 @@ export const EntitiesPage: React.FC = () => {
             
             <button
               onClick={() => setShowCreateModal(true)}
-              className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700"
+              className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-teal-600 hover:bg-teal-700"
             >
               <Plus className="h-4 w-4 mr-2" />
               New Entity
@@ -321,8 +321,8 @@ export const EntitiesPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="flex items-center">
-                <div className="p-3 bg-blue-50 rounded-lg">
-                  <Building2 className="h-6 w-6 text-blue-600" />
+                <div className="p-3 bg-teal-50 rounded-lg">
+                  <Building2 className="h-6 w-6 text-teal-600" />
                 </div>
                 <div className="ml-4">
                   <p className="text-sm font-medium text-gray-600">Total Entities</p>
@@ -401,7 +401,7 @@ export const EntitiesPage: React.FC = () => {
               </p>
               <button
                 onClick={() => setShowCreateModal(true)}
-                className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700"
+                className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-teal-600 hover:bg-teal-700"
               >
                 <Plus className="h-4 w-4 mr-2" />
                 Create Entity

@@ -5,32 +5,35 @@ import { Sidebar } from './Sidebar'
 import { cn } from '@/utils/cn'
 
 export const DashboardLayout: React.FC = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('list')
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Mobile sidebar overlay */}
-      <div 
-        className={cn(
-          'fixed inset-0 z-40 bg-black bg-opacity-50 lg:hidden',
-          sidebarOpen ? 'block' : 'hidden'
-        )}
-        onClick={() => setSidebarOpen(false)}
-      />
-
       {/* Sidebar */}
       <Sidebar 
-        isOpen={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
+        isCollapsed={sidebarCollapsed}
+        onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
+        isMobileOpen={mobileMenuOpen}
+        onMobileClose={() => setMobileMenuOpen(false)}
       />
 
       {/* Main content */}
-      <div className="lg:pl-64 flex flex-col min-h-screen">
-        <Header onMenuClick={() => setSidebarOpen(true)} />
+      <div className={cn(
+        'flex flex-col min-h-screen transition-all duration-300',
+        sidebarCollapsed ? 'lg:pl-16' : 'lg:pl-64'
+      )}>
+        <Header 
+          onMenuClick={() => setMobileMenuOpen(true)}
+          isCollapsed={sidebarCollapsed}
+          viewMode={viewMode}
+          onViewModeChange={setViewMode}
+        />
         
         <main className="flex-1 py-6 px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <Outlet />
+            <Outlet context={{ viewMode, setViewMode }} />
           </div>
         </main>
       </div>
